@@ -5,6 +5,7 @@ from .views import (
     AdsDetailView,
     CreateAdsView,
     ContactAdminView,
+    AdsCleanupView,
 )
 
 urlpatterns = [
@@ -13,4 +14,5 @@ urlpatterns = [
     path('ads/create/', CreateAdsView.as_view(), name='ads_create'),
     path('ads/<slug:slug>/', AdsDetailView.as_view(), name='ads_detail'),
     path('contact/', ContactAdminView.as_view(), name='contact_admin'),
+    path('clean/', AdsCleanupView.as_view(), name='ads_cleanup'),
 ]
